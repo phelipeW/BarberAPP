@@ -1,0 +1,57 @@
+{
+  "cli": {
+    "version": ">= 0.54.1"
+  },
+  "build": {
+    "base": {
+      "env": {}
+    },
+    "development": {
+      "extends": "base",
+      "developmentClient": true,
+      "distribution": "internal",
+      "releaseChannel": "default",
+      "android": {
+        "buildType": "apk"
+      },
+      "ios": {
+        "simulator": true
+      },
+      "env": {
+        "APP_ENV": "development",
+        "BASE_URL": "127.0.0.1:3333"
+      }
+    },
+    "preview": {
+      "extends": "base",
+      "developmentClient": true,
+      "distribution": "internal",
+      "releaseChannel": "preview",
+      "android": {
+        "buildType": "apk"
+      },
+      "ios": {
+        "simulator": true
+      },
+      "env": {
+        "APP_ENV": "development",
+        "BASE_URL": "127.0.0.1:3333"
+      }
+    },
+    "production": {
+      "extends": "base",
+      "distribution": "store",
+      "releaseChannel": "stable",
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "env": {
+        "APP_ENV": "production",
+        "BASE_URL": ""
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
