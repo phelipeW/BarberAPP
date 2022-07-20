@@ -9,7 +9,7 @@ const Login: React.FC = () => {
   const { state, actions } = useAuthStore(store => store);
 
   function handleLogin() {
-    actions.login(123123, 'teste');
+    actions.login(123123, 'test44');
   }
 
   return (
