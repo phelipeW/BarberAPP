@@ -1,8 +1,8 @@
 export default {
   dark: false,
   colors: {
-    primary: '#4433aa',
-
+    primary: '#001A2F',
+    secondary: '#17847B',
     success: '#269E26',
     info: '#235C7E',
     danger: '#c53030',
@@ -12,9 +12,9 @@ export default {
     white: '#fff',
     transparent: 'transparent',
 
-    background: '#d1d1d1',
+    background: '#F8F8F8',
     card: 'rgb(255, 255, 255)',
-    text: 'rgb(28, 28, 30)',
+    text: '#495057',
     border: 'rgb(199, 199, 204)',
     notification: 'rgb(255, 69, 58)',
   },
@@ -32,4 +32,10 @@ export default {
     hg: 26,
     xhg: 30,
   },
+  metrics: {
+    basePadding: 8,
+    baseMargin: 16,
+    baseRadius: 16
+  }
+
 };
