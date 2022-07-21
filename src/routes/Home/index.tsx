@@ -4,7 +4,7 @@ const { Navigator, Screen } = createNativeStackNavigator();
 
 import { Home } from '../../components/pages';
 
-export function AuthRoutes() {
+export function HomeRoutes() {
   return (
     <Navigator screenOptions={{ headerShown: false }} initialRouteName="Home">
       <Screen name="Home" component={Home} />
