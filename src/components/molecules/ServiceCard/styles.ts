@@ -25,7 +25,12 @@ const styles = StyleSheet.create({
     fontSize: fontSize.hg,
     color: colors.white,
     fontWeight: 'bold',
-  }
+  },
+  duration: {
+    fontSize: fontSize.md,
+    color: colors.white,
+    marginLeft: baseMargin / 2,
+  },
 });
 
 export default styles;

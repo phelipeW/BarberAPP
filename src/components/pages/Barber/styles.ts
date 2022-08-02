@@ -34,6 +34,12 @@ const styles = StyleSheet.create({
     paddingLeft: basePadding*2,
     marginTop: baseMargin
   },
+  description: {
+    fontSize: fontSize.md,
+    color: colors.white,
+    paddingLeft: basePadding*2,
+    marginTop: baseMargin / 2
+  },
   tabContainer: {
     flexDirection: 'row',
     marginVertical: baseMargin,

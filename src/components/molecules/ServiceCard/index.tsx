@@ -5,6 +5,7 @@ import background from '../../../assets/images/barber_background.jpeg';
 import styles from './styles';
 import theme from '../../../global/styles/theme';
 import { currencyMask } from '../../../utils';
+import { Icon } from '@rneui/themed';
 // import { Container } from './styles';
 
 const ServiceCard: React.FC<IServiceCard> = ({
@@ -12,6 +13,7 @@ const ServiceCard: React.FC<IServiceCard> = ({
   title,
   price,
   onPress,
+  duration,
 }) => {
   return (
     <TouchableOpacity onPress={onPress}>
@@ -22,6 +24,12 @@ const ServiceCard: React.FC<IServiceCard> = ({
       >
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.description}>{description}</Text>
+        <View
+          style={{ flexDirection: 'row', alignItems: 'center', marginTop: 8 }}
+        >
+          <Icon name="clock" type="feather" color={theme.colors.white} />
+          <Text style={styles.duration}>{duration} minutos</Text>
+        </View>
         <Text style={styles.price}>{currencyMask(price)}</Text>
       </ImageBackground>
     </TouchableOpacity>

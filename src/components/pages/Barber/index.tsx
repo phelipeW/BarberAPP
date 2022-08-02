@@ -13,7 +13,7 @@ import theme from '../../../global/styles/theme';
 import { HighlighCarousel, ServiceCard } from '../../molecules';
 import styles from './styles';
 
-const Barber: React.FC = () => {
+const Barber: React.FC = ({ navigation }) => {
   const [selectedTab, setSelectedTab] = useState(1);
 
   const highLight = [
@@ -27,11 +27,13 @@ const Barber: React.FC = () => {
       title: 'Corte do jaca',
       description: 'Corte mais pra frente 100% regua',
       price: 19.0,
+      duration: 30,
     },
     {
       title: 'America',
       description: 'Quando nao to de america eu lanço o do jaca',
       price: 13.0,
+      duration: 45,
     },
   ];
 
@@ -58,8 +60,12 @@ const Barber: React.FC = () => {
               />
             </TouchableOpacity>
           </View>
-          <Text style={styles.title}>Tiago du Corte</Text>
-
+          <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+            <Text style={styles.title}>Tiago du Corte</Text>
+            <Text style={styles.description}>
+              Rua São Nicolau, 303 - (21)2647-1293
+            </Text>
+          </View>
           {/* <AirbnbRating
           count={5}
           reviews={[]}
@@ -140,7 +146,8 @@ const Barber: React.FC = () => {
                   title={item.title}
                   description={item.description}
                   price={item.price}
-                  onPress={() => console.log('STAR BOY')}
+                  onPress={() => navigation.navigate('Schedule', { item })}
+                  duration={item.duration}
                 />
               ))}
             </View>
