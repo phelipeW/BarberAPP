@@ -146,7 +146,7 @@ const Barber: React.FC = ({ navigation }) => {
                   title={item.title}
                   description={item.description}
                   price={item.price}
-                  onPress={() => navigation.navigate('Schedule', { item })}
+                  onPress={() => navigation.navigate('Professional', { item })}
                   duration={item.duration}
                 />
               ))}
